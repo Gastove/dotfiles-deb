@@ -3,7 +3,10 @@
 apt_install_standards() {
 
     local -a packages_to_get=(
+        'curl'
+        'rails3'
         'scala'
+        'ruby1.9.3'
         'scala-doc'
         'git'
         'mercurial'
