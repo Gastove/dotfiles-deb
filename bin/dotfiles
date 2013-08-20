@@ -19,7 +19,7 @@ if [[ ! -d ${DOTFILES_DIRECTORY} ]]; then
     # Remove the tarball
     rm -rf ${HOME}/dotfiles.tar.gz
 fi
-exit
+
 source ./lib/help
 source ./lib/list
 source ./lib/utils
