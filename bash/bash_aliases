@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# bash_aliases
+
+alias et="emacsclient -t"
+alias ec="emacsclient -c"
