@@ -67,11 +67,11 @@ fi
 
 # GCC is standard on Debian flavors, so skip checking for now.
 # Start with everything fresh and new.
-sudo apt-get update
-sudo apt-get upgrade -y
+# sudo apt-get update
+# sudo apt-get upgrade -y
 
 apt_install_standards
-
+exit
 if $(dpkg-query -l rvm > /dev/null); then
     printf "Ruby found, moving on"
 else
