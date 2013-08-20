@@ -6,6 +6,7 @@ apt_install_standards() {
     local -a missing_packages
     local -a packages_to_get=(
         'curl'
+        'google-chrome-stable'
         'rails3'
         'scala'
         'ruby1.9.3'
