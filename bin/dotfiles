@@ -23,7 +23,6 @@ fi
 cd ${DOTFILES_DIRECTORY}
 
 source ./lib/help
-source ./lib/list
 source ./lib/utils
 source ./lib/apt
 
