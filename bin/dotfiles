@@ -20,6 +20,8 @@ if [[ ! -d ${DOTFILES_DIRECTORY} ]]; then
     rm -rf ${HOME}/dotfiles.tar.gz
 fi
 
+cd ${DOTFILES_DIRECTORY}
+
 source ./lib/help
 source ./lib/list
 source ./lib/utils
