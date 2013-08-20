@@ -1,0 +1,35 @@
+#!/bin/bash
+
+apt_install_standards() {
+
+    local -a packages_to_get=(
+        'scala'
+        'scala-doc'
+        'git'
+        'mercurial'
+        'python-pip'
+        'mysql'
+        'emacs24'
+        'open-ssh'
+    )
+
+    for index in ${!packages_to_get[*]}
+    do
+        if ! package_installed ${packages_to_get[*]}; then
+            missing_packages=("${missing_packages[@]}" "${packages_to_get[$index]}")
+        fi
+    done
+
+    if [[ "$missing_packages" ]]; then
+        # Convert list to space-delimited string
+        list_of_packages=$( printf "%s " "$missing_packages[@]" )
+
+        e_header "Installing missing packages"
+
+        sudo apt-get install -f -y $list_of_packages
+
+        [[ $? ]] && e_success "Done"
+
+    fi
+
+}
