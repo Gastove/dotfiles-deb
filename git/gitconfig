@@ -1,6 +1,6 @@
 [user]
-    user.name = "Ross Donaldson"
-    user.email = "gastove@gmail.com"
+    name = "Ross Donaldson"
+    email = "gastove@gmail.com"
 [alias]
     # https://git.wiki.kernel.org/articles/a/l/i/Aliases.html
 

@@ -12,7 +12,7 @@ Options:
     -l, --list      Print a list of additional software to install
     --no-packages   Suppress package updates
     --no-sync       Suppress pulling from the remote repository
-
+    --skip-up       Skip apt-get update/upgrade
 Documentation can be found at https://github.com/necolas/dotfiles/
 
 Copyright (c) Nicolas Gallagher
