@@ -20,7 +20,7 @@ apt_install_standards() {
 
     for index in ${!packages_to_get[*]}
     do
-        if ! package_installed ${packages_to_get[*]}; then
+        if ! package_installed ${packages_to_get[$index]}; then
             missing_packages=("${missing_packages[@]}" "${packages_to_get[$index]}")
         fi
     done
