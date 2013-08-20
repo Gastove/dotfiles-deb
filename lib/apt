@@ -14,9 +14,7 @@ apt_install_standards() {
         'git'
         'mercurial'
         'python-pip'
-        'mysql'
         'emacs24'
-        'open-ssh'
     )
 
     for index in ${!packages_to_get[*]}
