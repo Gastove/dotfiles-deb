@@ -52,7 +52,7 @@ type_exists() {
 
 # Test if apt-get repo is already added
 apt_repo_exists(){
-    if apt-cache policy | grep $1; then
+    if $(apt-cache policy | grep $1); then
         printf "Repo already exists: %s\n" "$1"
         return 0
     fi
