@@ -15,6 +15,7 @@ apt_install_standards() {
         'mercurial'
         'python-pip'
         'emacs24'
+        'linux-headers-generic'
     )
 
     for index in ${!packages_to_get[*]}
