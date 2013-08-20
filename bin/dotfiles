@@ -6,7 +6,7 @@
 
 DOTFILES_DIRECTORY="${HOME}/.dotfiles"
 DOTFILES_TARBALL_PATH="https://github.com/gastove/dotfiles-deb/tarball/master"
-DOTFILES_GIT_REMOTE="https://github.com/gastove/dotfiles-deb"
+DOTFILES_GIT_REMOTE="git@github.com:Gastove/dotfiles-deb.git"
 
 # Check for the directory; download if needed.
 if [[ ! -d ${DOTFILES_DIRECTORY} ]]; then
