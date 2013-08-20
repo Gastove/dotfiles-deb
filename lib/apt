@@ -2,6 +2,8 @@
 
 apt_install_standards() {
 
+    local list_of_packages
+    local -a missing_packages
     local -a packages_to_get=(
         'curl'
         'rails3'
