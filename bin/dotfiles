@@ -5,13 +5,13 @@
 # it doesn't have to check for upgrades one-by-one.
 
 DOTFILES_DIRECTORY="${HOME}/.dotfiles"
-DOTFILES_TARBALL_PATH="https://github.com/gastove/dotfiles-db/tarball/master"
+DOTFILES_TARBALL_PATH="https://github.com/gastove/dotfiles-deb/tarball/master"
 DOTFILES_GIT_REMOTE="https://github.com/gastove/dotfiles-deb"
 
 # Check for the directory; download if needed.
 if [[ ! -d ${DOTFILES_DIRECTORY} ]]; then
-    printf "$( tput setaf 7)Downloading dotfiles... \033 [m\n"
-    mkdir {$DOTFILES_DIRECTORY}
+    printf "$( tput setaf 7)Downloading dotfiles...\n"
+    mkdir ${DOTFILES_DIRECTORY}
     # Get the tarball, somehow? Figure this out.
     curl -fsSLo ${HOME}/dotfiles.tar.gz ${DOTFILES_TARBALL_PATH}
     # Extract it
@@ -19,7 +19,7 @@ if [[ ! -d ${DOTFILES_DIRECTORY} ]]; then
     # Remove the tarball
     rm -rf ${HOME}/dotfiles.tar.gz
 fi
-
+exit
 source ./lib/help
 source ./lib/list
 source ./lib/utils
