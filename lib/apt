@@ -30,7 +30,7 @@ apt_install_standards() {
 
         e_header "Installing missing packages"
 
-        sudo apt-get install -f -y $list_of_packages
+        sudo apt-get install --install-suggests -f -y $list_of_packages
 
         [[ $? ]] && e_success "Done"
 
