@@ -29,9 +29,9 @@ apt_install_standards() {
     if [[ "$missing_packages" ]]; then
         # Convert list to space-delimited string
         list_of_packages=$( printf "%s " "${missing_packages[@]}" )
-        echo $"list_of_packages"
+
         e_header "Installing missing packages"
-        exit
+
         sudo apt-get install -f -y $list_of_packages
 
         [[ $? ]] && e_success "Done"
