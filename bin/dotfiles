@@ -25,7 +25,7 @@ cd ${DOTFILES_DIRECTORY}
 source ./lib/help
 source ./lib/utils
 source ./lib/apt
-
+source ./lib/pip
 
 # Show help on flag
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then
