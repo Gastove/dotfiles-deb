@@ -16,7 +16,7 @@ run_pip() {
             printf "Package already installed: %s" "${desired_pip_packages[index]}"
         else
             printf "Installing missing package: %s" "${desired_pip_packages[index]}"
-            pip install ${desired_pip_packages[index]}
+            sudo pip install ${desired_pip_packages[index]}
         fi
     done
 

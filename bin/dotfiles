@@ -46,7 +46,7 @@ do
     case $opt in
         --no-packages) no_packages=true ;;
         --no-sync) no_sync=true ;;
-        --skip-up) skip_update=true;;
+        -sau|--skip-apt-update) skip_update=true;;
         --rvm) install_rvm=true;;
         -*|--*) e_warning "Warning: invalid option $opt" ;;
     esac
