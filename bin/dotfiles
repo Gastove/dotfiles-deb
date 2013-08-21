@@ -68,7 +68,7 @@ fi
 
 # GCC is standard on Debian flavors, so skip checking for now.
 # Start with everything fresh and new.
-if ! skip_update; then
+if [[! $skip_update ]]; then
     sudo apt-get update
     sudo apt-get upgrade -y
 fi
@@ -121,7 +121,7 @@ mirrorfiles() {
     # `.dotfiles` repository.
     link "bash/bashrc"        ".bashrc"
     link "bash/bash_aliases"  ".bash_aliases"
-    link "bash/inputrc"       ".inputrc"
+    linK "bash/inputrc"       ".inputrc"
     link "git/gitattributes"  ".gitattributes"
     link "git/gitignore"      ".gitignore"
 
