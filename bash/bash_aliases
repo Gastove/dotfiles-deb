@@ -34,7 +34,7 @@ alias et="emacsclient -t"
 alias c="pygmentize -O style=solarized -f console256 -g"
 
 # What the hell aliases do I have again?
-alias aliases="cat ~/.bash_profile | c"
+alias aliases="cat ~/.bash_aliases | c"
 
 # IP addresses
 # alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
