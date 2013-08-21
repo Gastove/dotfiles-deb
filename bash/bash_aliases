@@ -21,11 +21,20 @@ alias la="ls -AGFoh"
 # List all except . and ..., color, mark file types, long form no use group, order by last modified, file size
 alias lat="ls -AGFoth"
 
+# Find a process with my Usual Flags
+alisas pgrp="ps ax | grep"
+
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
 
+# emacs
+alias et="emacsclient -t"
+
 # Fancycat™ -- hat-tip @wilto
 alias c="pygmentize -O style=solarized -f console256 -g"
+
+# What the hell aliases do I have again?
+alias aliases="cat ~/.bash_profile | c"
 
 # IP addresses
 # alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -36,8 +45,3 @@ alias c="pygmentize -O style=solarized -f console256 -g"
 
 # Flush DNS cache
 # alias flushdns="dscacheutil -flushcache"
-
-# Handy Emacs Shortcuts
-
-alias et="emacsclient -t"
-alias ec="emacsclient -c"
