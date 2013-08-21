@@ -76,8 +76,10 @@ else
     sudo apt-get upgrade -y
 fi
 
+e_header "Checking apt packages"
 apt_install_standards
 
+e_header "Checking pip packages"
 run_pip
 
 if [[ ! $install_rvm ]]; then

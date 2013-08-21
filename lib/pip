@@ -12,7 +12,9 @@ run_pip() {
 
     for index in ${!desired_pip_packages[*]}
     do
-        if [ pip list | grep "${desired_pip_packages[index]}"]; then
+        if pip list | grep "${desired_pip_packages[index]}"; then
+            printf "Package already installed: %s" "${desired_pip_packages[index]}"
+        else
             printf "Installing missing package: %s" "${desired_pip_packages[index]}"
             pip install ${desired_pip_packages[index]}
         fi
