@@ -90,6 +90,8 @@ if ! is_git_repo; then
     git init
     git remote add origin ${DOTFILES_GIT_REMOTE}
     git fetch origin master
+    git reset --hard FETCH_HEAD
+    git clean -fd
 fi
 
 if [[ $no_sync ]]; then
@@ -111,9 +113,9 @@ mirrorfiles() {
     # `.gitconfig`. This prevents them being committed to the repository.
     rsync -avz --quiet ${DOTFILES_DIRECTORY}/git/gitconfig  ${HOME}/.gitconfig
 
-    # Force remove the vim directory if it's already there.
-    if [ -e "${HOME}/.vim" ]; then
-        rm -rf "${HOME}/.vim"
+    # Nuke the home emacs directory
+    if [ -e "${HOME}/.emacs.d" ]; then
+        rm -rf "${HOME}/.emacs.d"
     fi
 
     # Create the necessary symbolic links between the `.dotfiles` and `HOME`
@@ -124,6 +126,7 @@ mirrorfiles() {
     linK "bash/inputrc"       ".inputrc"
     link "git/gitattributes"  ".gitattributes"
     link "git/gitignore"      ".gitignore"
+    link "emacs"              ".emacs.d"
 
     e_success "Dotfiles update complete!"
 }
