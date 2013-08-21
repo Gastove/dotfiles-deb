@@ -127,6 +127,7 @@ mirrorfiles() {
     # directory. The `bash_profile` sources other files directly from the
     # `.dotfiles` repository.
     link "bash/bashrc"        ".bashrc"
+    link "bash/bash_profile"  ".bash_profile"
     link "bash/bash_aliases"  ".bash_aliases"
     link "bash/inputrc"       ".inputrc"
     link "git/gitattributes"  ".gitattributes"
