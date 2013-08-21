@@ -22,7 +22,7 @@ alias la="ls -AGFoh"
 alias lat="ls -AGFoth"
 
 # Find a process with my Usual Flags
-alisas pgrp="ps ax | grep"
+alias pgrp="ps ax | grep"
 
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
