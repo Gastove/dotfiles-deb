@@ -123,7 +123,7 @@ mirrorfiles() {
     # `.dotfiles` repository.
     link "bash/bashrc"        ".bashrc"
     link "bash/bash_aliases"  ".bash_aliases"
-    linK "bash/inputrc"       ".inputrc"
+    link "bash/inputrc"       ".inputrc"
     link "git/gitattributes"  ".gitattributes"
     link "git/gitignore"      ".gitignore"
     link "emacs"              ".emacs.d"
