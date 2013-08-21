@@ -2,8 +2,6 @@
 
 run_pip() {
 
-    pip update
-
     local -a desired_pip_packages=(
         'httpie'
         'pygments'
