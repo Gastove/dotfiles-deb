@@ -109,7 +109,7 @@ fi
 
 link() {
     # Force create/replace the symlink.
-    ln -fs "${DOTFILES_DIRECTORY}/${1}" "${HOME}/${2}"
+    sudo ln -fs "${DOTFILES_DIRECTORY}/${1}" "${HOME}/${2}"
 }
 
 mirrorfiles() {
