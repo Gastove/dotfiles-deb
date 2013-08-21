@@ -1,0 +1,22 @@
+#!/bin/bash
+
+run_pip() {
+
+    pip update
+
+    local -a desired_pip_packages=(
+        'httpie'
+        'pygments'
+        'pygments-style-solarized'
+    )
+
+    for index in ${!desired_pip_packages[*]}
+    do
+        if [ pip list | grep "${desired_pip_packages[index]}"]; then
+            pip install ${desired_pip_packages[index]}
+        fi
+    done
+
+    unset desired_pip_packages
+
+}

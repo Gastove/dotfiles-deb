@@ -5,7 +5,7 @@
 # it doesn't have to check for upgrades one-by-one.
 
 DOTFILES_DIRECTORY="${HOME}/.dotfiles"
-DOTFILES_TARBALL_PATH="https://github.com/gastove/dotfiles-deb/tarball/master"
+DOTFILES_TARBALL_PATH="https://github.com/Gastove/dotfiles-deb/tarball/master"
 DOTFILES_GIT_REMOTE="git@github.com:Gastove/dotfiles-deb.git"
 
 # Check for the directory; download if needed.
@@ -74,6 +74,8 @@ if ! skip_update; then
 fi
 
 apt_install_standards
+
+run_pip
 
 if $(dpkg-query -l rvm > /dev/null); then
     printf "Ruby found, moving on"
