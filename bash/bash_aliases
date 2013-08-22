@@ -10,10 +10,18 @@ alias ...="cd ../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
+# git
+alias gts="git status"
+alias gtc="git clone"
+# Commit all changes, open default editor for commit message
+alias gta="git commit -a"
+
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
 alias l="ls -oG"
+# Long form, no user group, color, show hidden files
+alias ll="ls -laoG"
 # Order by last modified, long form no user group, color
 alias lt="ls -toG"
 # List all except . and ..., color, mark file types, long form no user group, file size

@@ -48,7 +48,7 @@
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
-    editor = emacs -nw
+    editor = emacsclient -t
 
 [pretty]
     # tut: http://gitimmersion.com/lab_10.html
