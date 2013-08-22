@@ -37,6 +37,8 @@ alias catn="cat -n"
 
 # emacs
 alias et="emacsclient -t"
+alias estart="emacs --daemon"
+alias estop="emacsclient -e '(kill-emacs)'"
 
 # Fancycat(tm) -- hat-tip @wilto
 alias c="pygmentize -O style=solarized -f console256 -g"
