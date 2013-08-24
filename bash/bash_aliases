@@ -15,6 +15,8 @@ alias gts="git status"
 alias gtc="git clone"
 # Commit all changes, open default editor for commit message
 alias gta="git commit -a"
+# Allow an empty commit; used *only* to force a Heroku rebuild, if needed.
+alias gempty="git commit --allow-empty"
 
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
@@ -35,13 +37,17 @@ alias pgrp="ps ax | grep"
 # Concatenate and print content of files (add line numbers)
 alias catn="cat -n"
 
+# Fancycat(tm) -- hat-tip @wilto
+alias c="pygmentize -O style=solarized -f console256 -g"
+
 # emacs
 alias et="emacsclient -t"
 alias estart="emacs --daemon"
 alias estop="emacsclient -e '(kill-emacs)'"
 
-# Fancycat(tm) -- hat-tip @wilto
-alias c="pygmentize -O style=solarized -f console256 -g"
+# Heroku
+alias hgo="git push heroku master"
+alias hlogs="heroku logs"
 
 # What the hell aliases do I have again?
 alias aliases="cat ~/.dotfiles/bash/bash_aliases | c"
