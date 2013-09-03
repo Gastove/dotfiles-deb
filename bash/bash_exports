@@ -2,7 +2,7 @@
 
 # bash_config
 
-# Make vim the default editor
+# Make emacs the default editor
 export EDITOR="emacs"
 
 # Ignore duplicate commands in the history

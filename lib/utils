@@ -50,6 +50,14 @@ type_exists() {
     return 1
 }
 
+# Which operating system are we on?
+is_debian(){
+    if uname == "Linux"; then
+        return 0
+    fi
+    return 1
+}
+
 # Test if apt-get repo is already added
 apt_repo_exists(){
     if apt-cache policy | grep $1; then
@@ -61,6 +69,7 @@ apt_repo_exists(){
     return 1
 }
 
+# Is a Debian package installed?
 package_installed(){
     if $(dpkg-query -l $1 > /dev/null); then
         printf "%s already installed.\n" "$1"
