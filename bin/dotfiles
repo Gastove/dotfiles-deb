@@ -46,7 +46,6 @@ do
     case $opt in
         --no-packages) no_packages=true ;;
         --no-sync) no_sync=true ;;
-        -sau|--skip-apt-update) skip_update=true;;
         --rvm) install_rvm=true;;
         -*|--*) e_warning "Warning: invalid option $opt" ;;
     esac
@@ -67,17 +66,15 @@ if ! apt_repo_exists 'google'; then
     sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 fi
 
-# GCC is standard on Debian flavors, so skip checking for now.
-# Start with everything fresh and new.
-if [[ $skip_update ]]; then
-    printf "Skipping apt-get update"
+# Handle apt, unless skip.
+if [[ $no_packages ]]; then
+    e_header "Skipping apt procedures"
 else
+    e_header "Checking apt packages"
     sudo apt-get update
     sudo apt-get upgrade -y
+    apt_install_standards
 fi
-
-e_header "Checking apt packages"
-apt_install_standards
 
 e_header "Checking pip packages"
 run_pip

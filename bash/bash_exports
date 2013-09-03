@@ -2,8 +2,8 @@
 
 # bash_config
 
-# Make emacs the default editor
-export EDITOR="emacs"
+# Make the emacs client, run in the terminal the default editor
+export EDITOR="emacsclient -t"
 
 # Ignore duplicate commands in the history
 export HISTCONTROL=ignoredups
