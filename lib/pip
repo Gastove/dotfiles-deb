@@ -3,6 +3,7 @@
 run_pip() {
 
     local -a desired_pip_packages=(
+        'virtualenv'
         'httpie'
         'pygments'
         'pygments-style-solarized'
